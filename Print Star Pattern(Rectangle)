@@ -1,0 +1,30 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 17/07/2021 12:14:30 PM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+   unsigned int row,col,length,width;
+    printf("enter length: ");
+    scanf("%d",&length);
+    printf("enter width: ");
+    scanf("%d",&width);
+    for(row=0; row<length; row++)
+    {
+        for(col=0; col<width; col++)
+        {
+            if(row==0||row==length-1||col==0||col==width-1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
