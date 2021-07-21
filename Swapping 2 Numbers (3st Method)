@@ -1,0 +1,17 @@
+/*********************************************************************************************/
+/* Author       : Mostafa Zween                                                              */
+/* Date         : 07/11/2021 02:14:30 PM                                                     */
+/* version      : 02                                                                         */
+/************************************* Swapping Two Numbers **********************************/
+#include <stdio.h>
+int main()
+{
+    unsigned int x,y;
+    scanf("%u%u",&x,&y);
+    printf("Before Swapping\nx= %u\ny= %u\n",x,y);
+    x=x^y;
+    y=x^y;
+    x=x^y;
+    printf("After Swapping\nx= %u\ny= %u\n",x,y);
+    return 0;
+}
