@@ -1,0 +1,21 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 01/07/2021 02:14:30 PM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    unsigned int row,col,length;
+    printf("Enter Length of Triangle: ");
+    scanf("%u",&length);
+    for(row=1;row<=length;row++)
+    {
+        for(col=length;col>=row;col--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
