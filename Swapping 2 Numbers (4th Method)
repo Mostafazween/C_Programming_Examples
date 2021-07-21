@@ -1,0 +1,16 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 15/07/2021 10:14:30 AM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    unsigned int x=5,y=6;
+    printf("Before Swapping:\nx = %u\ny = %u\n",x,y);
+    x = x*y;
+    y = x/y;
+    x = x/y;
+    printf("After Swapping:\nx = %u\ny = %u\n",x,y);
+    return 0;
+}
