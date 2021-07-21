@@ -1,0 +1,39 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 20/07/2021 08:14:30 AM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+unsigned int sum(int *ptr); // Function Prototype
+int main()
+{
+    int number;
+    /*-------------------------------------------------------------------------*/
+    /*  do
+      {
+        printf("Enter number: ");
+      scanf("%i",&number);
+      }while((number<=0));*/
+    /*-------------------------------------------------------------------------*/
+L1:
+    printf("Enter number: ");
+    scanf("%i",&number);
+    if(number<=0)
+    {
+        printf("Please Enter Valid number\n");
+        goto L1;
+    }
+    unsigned int result=sum(&number);
+    printf("sum is %u",result);
+    return 0;
+}
+/*-------------------------Function Implementation------------------------------*/
+unsigned int sum( int *ptr)
+{
+    int i,sum=0;
+    for(i=0; i<=(*ptr); i++)
+    {
+        sum=i+sum;
+    }
+    return sum;
+}
