@@ -1,0 +1,21 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 18/07/2021 02:14:30 PM                                                      */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    int row,col,length;
+    printf("Enter Length: ");
+    scanf("%d",&length);
+    for(row=0; row<length; row++)
+    {
+        for(col=0;col<=row; col++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
