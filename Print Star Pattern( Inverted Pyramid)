@@ -1,0 +1,25 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 18/07/2021 01:14:30 PM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    int row,col_star,length,col_space;
+    printf("Enter Length of Inverted Pyramid: ");
+    scanf("%d",&length);
+    for(row=length;row>0;row--)
+    {
+        for (col_space=0;col_space<=length-row;col_space++ )
+        {
+            printf(" ");
+        }
+        for (col_star=0;col_star<(2*row-1);col_star++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
