@@ -1,0 +1,53 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 15/07/2021 10:30:30 AM                                                       */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    signed int operand_1,operand_2;
+    float res;
+    char operation;
+    printf("-----------------------------Calculator----------------------------------\n");
+    printf("Enter First Operand\n");
+    scanf("%i",&operand_1);
+    printf("Enter Second Operand\n");
+    scanf("%i",&operand_2);
+    fflush(stdin);  // Problem of Input Buffer
+    printf("Enter Operation\n");
+    scanf("%c",&operation);
+    if(operation=='+')
+    {
+        res = operand_1 + operand_2;
+        printf("Sum = %i\n",(signed int)res);
+    }
+    else if(operation=='-')
+    {
+        res = operand_1 - operand_2;
+        printf("Sub = %i\n",(signed int)res);
+    }
+    else if(operation=='*')
+    {
+        res = operand_1 * operand_2;
+        printf("Multiply = %i\n",(signed int)res);
+    }
+    else if(operation=='/')
+    {
+        if (operand_2==0)
+        {
+            printf("Invalid");
+        }
+        else
+        {
+            res = (float) operand_1 /(float) operand_2;
+            printf("div = %f\n",res);
+        }
+
+    }
+    else
+    {
+        printf("Invalid Operation");
+    }
+    return 0;
+}
