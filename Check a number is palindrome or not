@@ -1,0 +1,32 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 24/07/2021 08:00:30 PM                                                      */
+/* version      : 01                                                                         */
+/********************************************************************************************/
+/*
+Palindrome Number: is a number that is the same after reverse.
+ex:343-121
+*/
+#include <stdio.h>
+int main()
+{
+    int num,palindrome =0,remainder,num_copy;
+    printf("Enter The Number: ");
+    scanf("%i",&num);
+    num_copy=num;
+    while(num!=0)
+    {
+        remainder=num%10;
+        palindrome =palindrome *10+remainder;
+        num=num/10;
+    }
+    if (num_copy==palindrome)
+    {
+        printf("%i Is a Palindrome",num_copy);
+    }
+    else
+    {
+        printf("%i Not a Palindrome",num_copy);
+    }
+    return 0;
+}
