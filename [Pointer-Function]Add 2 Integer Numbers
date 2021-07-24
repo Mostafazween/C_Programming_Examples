@@ -1,0 +1,23 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 22/07/2021 11:14:30 AM                                                      */
+/* version      : 01                                                                          */
+/**********************************************************************************************/
+#include <stdio.h>
+int add(int *ptr1,int *ptr2); // FUNCTION PROTOTYPE
+int main()
+{
+    int x,y;
+    printf("Enter 2 Integer Number\n");
+    scanf("%i%i",&x,&y);
+    int result =add(&x,&y);
+    printf("SUM = %i\n",result);
+
+    return 0;
+}
+/*--------------------------------function implementation----------------------*/
+int add(int *ptr1,int *ptr2)
+{
+    return *ptr1+*ptr2;
+}
+
