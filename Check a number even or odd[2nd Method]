@@ -1,0 +1,20 @@
+/**********************************************************************************************/
+/* Author       : Mostafa Zween                                                               */
+/* Date         : 23/07/2021 05:30:30 PM                                                      */
+/* version      : 01                                                                         */
+/*********************************************************************************************/
+#include <stdio.h>
+int main()
+{
+    int num;
+L1:
+    printf("Enter Number: ");
+    scanf("%i",&num);
+    if(num==0)
+    {
+        goto L1;
+    }
+    num&=((1<<0)>>0);    //check LSB
+    (num==0)?printf("Number Is Even"):printf("Number Is Odd");
+    return 0;
+}
